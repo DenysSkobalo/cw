@@ -1,0 +1,58 @@
+# === C/C++ build artifacts ===
+*.o
+*.a
+*.so
+*.out
+*.exe
+*.log
+*.dSYM/
+*.obj
+*.dll
+*.lib
+*.map
+*.gch
+*.gcno
+*.gcda
+*.gcov
+
+# === C project build directories ===
+build/
+bin/
+
+# === Go build artifacts ===
+*.exe
+*.test
+*.out
+*.prof
+*.tmp
+
+# === Go modules (but keep go.mod & go.sum) ===
+/vendor/
+/pkg/
+
+# === Editor temp files ===
+*~
+*.swp
+*.swo
+.netrwhist
+__pycache__/
+.vscode/
+.idea/
+*.bak
+*.tmp
+
+# === Logs ===
+*.log
+
+# === MacOS junk ===
+.DS_Store
+
+# === CMake (if used) ===
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+
+TODO.md

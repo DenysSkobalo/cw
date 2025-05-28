@@ -3,15 +3,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct {
-    int *data;
-    size_t len;
-    size_t used;
-} buf_t;
-
-void buf_info(buf_t *b);
-buf_t* buf_malloc(size_t len);
+#include "../include/buf.h"
 
 void buf_info(buf_t *b) {
     printf("Total size: %zu\n", b->len);
@@ -50,26 +42,3 @@ void free_buf(buf_t *b) {
     free(b);
 }
 
-int main() {
-    size_t len = 64;
-    buf_t *buf = buf_malloc(len);
-    if (!buf) {
-        printf("Allocation failed!\n");
-        return 1;
-    }
-    printf("First info\n");
-    buf_info(buf);
-    printf("===================\n");
-
-    push(buf, 10);
-    push(buf, 20);
-    push(buf, 30);
-
-    printf("Second info\n");
-    buf_info(buf);
-    printf("===================\n");
-
-    free_buf(buf);
-
-    return 0;
-}
